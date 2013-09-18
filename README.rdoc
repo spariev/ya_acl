@@ -78,9 +78,9 @@ After that, acl object becomes accessible via YaAcl::Acl.instance.
 
     acl = YaAcl::Acl.instance
 
-    acl.allow?('UserController', :index, [:editor, :opeartor]) # true
-    acl.allow?('UserController', :edit, [:editor, :opeartor]) # true
-    acl.allow?('UserController', :edit, [:opeartor]) # false
+    acl.allow?('UserController', :index, [:editor, :operator]) # true
+    acl.allow?('UserController', :edit, [:editor, :operator]) # true
+    acl.allow?('UserController', :edit, [:operator]) # false
     acl.allow?('UserController', :new, [:admin], :current_user_id => 1, :another_user_id => 1) # true
     acl.allow?('UserController', :new, [:editor], :current_user_id => 1, :another_user_id => 2) # false
 
